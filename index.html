@@ -23,15 +23,19 @@
             age: 22
         }
 
-        handleClick(e) {
-            console.log(e.target);
+        handleClick = (e) => {
+            // console.log(e.target);
+            this.setState({
+                name: 'Keshava Pranath'
+            });
+            console.log(this.state);
         }
 
-        handleHover(e) {
+        handleHover = (e) => {
             console.log(e.target, e.pageX);
         }
 
-        handleCopy(e) {
+        handleCopy = (e) => {
             console.log('Thats what you are...', e.target);
         }
 
