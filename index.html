@@ -39,14 +39,27 @@
             console.log('Thats what you are...', e.target);
         }
 
+        handleChange = (e) => {
+            this.setState({
+                name: e.target.value
+            })
+        }
+
+        handleSubmit = (e) => {
+            e.preventDefault();
+            console.log(this.state.name);
+        }
+
         render() {
             return (
                 <div className="app-content">
                     <h1>Hey, Fellas</h1>
                     <p>My name is {this.state.name} and I am {this.state.age}</p>
-                    <button onClick={this.handleClick}>Click me</button>
-                    <button onMouseOver={this.handleHover}>Hover me</button>
-                    <p onCopy={this.handleCopy}>What we think, We become!!!</p>
+                    <form onSubmit={this.handleSubmit}>
+                        <input type="text" onChange={this.handleChange} />
+                        <button>Submit</button>
+                    </form>
+
                 </div>
             )
         }
