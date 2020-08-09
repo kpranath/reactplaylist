@@ -7,7 +7,7 @@ export class Ninjas extends Component {
 
         const ninjaList = ninjas.map(ninja => {
             return (
-                <div className='ninjas'>
+                <div className='ninjas' key={ninja.id}>
                     <p>Name: {ninja.name}</p>
                     <p>Age: {ninja.age}</p>
                     <p>Belt: {ninja.belt}</p>
