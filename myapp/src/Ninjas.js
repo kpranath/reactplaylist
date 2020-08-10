@@ -1,8 +1,7 @@
 import React from 'react'
 
-const Ninjas = (props) => {
+const Ninjas = ({ ninjas, deleteNinja }) => {
     // console.log(this.props);
-    const { ninjas } = props;
 
     // const ninjaList = ninjas.map(ninja => {
     //     if (ninja.age > 15) {
@@ -27,6 +26,7 @@ const Ninjas = (props) => {
                             <p>Name: {ninja.name}</p>
                             <p>Age: {ninja.age}</p>
                             <p>Belt: {ninja.belt}</p>
+                            <button onClick={() => { deleteNinja(ninja.id) }}>Delete Ninja</button>
                         </div>
                     ) : null;
                 })
