@@ -1,0 +1,13 @@
+body{
+    background-color: aqua;
+}
+
+form {
+    background-color: #fff;
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: plum;
+}
