@@ -30,6 +30,10 @@ class App extends Component {
     })
   }
 
+  componentDidMount() {
+    console.log("component Mounted");
+  }
+
   render() {
     return (
       <div className="App">
